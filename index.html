@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Pribadi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo" tabindex="0">Nama Kamu</div>
+        <ul role="menu" aria-label="Navigasi utama">
+          <li><a href="#" role="menuitem" onclick="tampilkanHalaman('beranda')">Beranda</a></li>
+          <li><a href="#" role="menuitem" onclick="tampilkanHalaman('tentang')">Tentang</a></li>
+          <li><a href="#" role="menuitem" onclick="tampilkanHalaman('portofolio')">Portofolio</a></li>
+          <li><a href="#" role="menuitem" onclick="tampilkanHalaman('kontak')">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="beranda" class="active" tabindex="0" aria-label="Beranda">
+      <img src="nida.jpg" alt="Foto Saya" class="foto-profil" tabindex="0" />
+      <div class="hero">
+        <h1>Halo, saya Nama Kamu 👋</h1>
+        <p>Ini adalah website pribadi saya yang berisi informasi tentang siapa saya, karya saya, dan cara menghubungi saya.</p>
+      </div>
+    </section>
+    <section id="tentang" tabindex="0" aria-label="Tentang Saya">
+      <div class="section-card">
+        <h2>Tentang Saya</h2>
+        <p>Halo! Saya adalah seorang pelajar yang menyukai dunia teknologi dan desain. Saya senang membuat website, belajar hal baru, dan terus berkembang.</p>
+      </div>
+    </section>
+    <section id="portofolio" tabindex="0" aria-label="Portofolio">
+      <div class="section-card">
+        <h2>Portofolio</h2>
+        <ul>
+          <li><strong>Desain Web Pribadi</strong> – Website responsif yang menampilkan profil saya.</li>
+          <li><strong>App To-Do List</strong> – Aplikasi JavaScript sederhana untuk manajemen tugas.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="kontak" tabindex="0" aria-label="Kontak">
+      <div class="section-card">
+        <h2>Kontak</h2>
+        <form onsubmit="kirimForm(event)" aria-label="Formulir kontak">
+          <input type="text" placeholder="Nama" required aria-required="true" />
+          <input type="email" placeholder="Email" required aria-required="true" />
+          <textarea placeholder="Pesan kamu..." required aria-required="true"></textarea>
+          <button type="submit">Kirim</button>
+          <p id="notif" role="alert">Pesan terkirim! 😊</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>© 2025 Nama Kamu</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
